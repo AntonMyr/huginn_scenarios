@@ -1,0 +1,47 @@
+{
+    "schema_version": 1,
+    "name": "SMS test",
+    "description": "No description provided",
+    "source_url": false,
+    "guid": "f0f99beb26f9f0e0ce24e4593c2e21d1",
+    "tag_fg_color": "#000000",
+    "tag_bg_color": "#fff600",
+    "icon": "gear",
+    "exported_at": "2020-07-01T12:02:25Z",
+    "agents": [
+        {
+            "type": "Agents::ManualEventAgent",
+            "name": "SMS manual event",
+            "disabled": false,
+            "guid": "6e2b1db3e6d1cefa69c9dad27d6ae9fa",
+            "options": {
+                "from": "\"Huginn\"",
+                "to": "\"+4670000000\"",
+                "message": "\"Hello this is Huginn\""
+            },
+            "keep_events_for": 0
+        },
+        {
+            "type": "Agents::SmsAgent",
+            "name": "SMS test",
+            "disabled": false,
+            "guid": "d7b3edae9ce50d53e30760ca9b17acf6",
+            "options": {
+                "api_username": "",
+                "api_password": "",
+                "from": "Huginn",
+                "to": ["+46700000000"],
+                "message": "Hello this is Huginn."
+            },
+            "schedule": "every_1m",
+            "propagate_immediately": true
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "receiver": 1
+        }
+    ],
+    "control_links": []
+}

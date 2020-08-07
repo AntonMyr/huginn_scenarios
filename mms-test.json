@@ -1,0 +1,47 @@
+{
+    "schema_version": 1,
+    "name": "MMS test",
+    "description": "No description provided",
+    "source_url": false,
+    "guid": "fe7603c6f69a466cc8ccbb7da63ec6be",
+    "tag_fg_color": "#000000",
+    "tag_bg_color": "#f1ff00",
+    "icon": "gear",
+    "exported_at": "2020-07-01T12:01:06Z",
+    "agents": [
+        {
+            "type": "Agents::ManualEventAgent",
+            "name": "MMS manual event",
+            "disabled": false,
+            "guid": "4b989381c053f9f58bdf0f3c85f57091",
+            "options": {
+                "from": "\"Huginn\"",
+                "to": "\"+46700000000\"",
+                "message": "\"Hello this is Huginn\""
+            },
+            "keep_events_for": 0
+        },
+        {
+            "type": "Agents::MmsAgent",
+            "name": "MMS agent",
+            "disabled": false,
+            "guid": "f7f3cfdee24a28d902938086de3f6cdd",
+            "options": {
+                "api_username": "",
+                "api_password": "",
+                "from": "noreply",
+                "to": ["+46700000000"],
+                "image": "https://46elks.com/press/46elks-blue-png",
+                "message": "Hello this is Huginn using 46elks."
+            },
+            "propagate_immediately": true
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "receiver": 1
+        }
+    ],
+    "control_links": []
+}

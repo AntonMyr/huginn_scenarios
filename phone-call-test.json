@@ -1,0 +1,44 @@
+{
+    "schema_version": 1,
+    "name": "Phone Call test",
+    "description": "No description provided",
+    "source_url": false,
+    "guid": "4dff0b81c11d4649a2b9364771d55081",
+    "tag_fg_color": "#000000",
+    "tag_bg_color": "#fffe00",
+    "icon": "gear",
+    "exported_at": "2020-07-02T14:29:45Z",
+    "agents": [
+        {
+            "type": "Agents::ManualEventAgent",
+            "name": "Phone Call Test Event",
+            "disabled": false,
+            "guid": "60fa66044520dcc73306e408ee626a85",
+            "options": {
+                "no options": "are needed"
+            },
+            "keep_events_for": 0
+        },
+        {
+            "type": "Agents::PhoneCallAgent",
+            "name": "Phone Call agent test",
+            "disabled": false,
+            "guid": "fadfe58193b96dce4ade54d9a3824979",
+            "options": {
+                "api_username": "",
+                "api_password": "",
+                "from": "+46700000000",
+                "to": ["+46700000000"],
+                "voice_start": "{\"play\":\"https://www.looperman.com/media/loops/2595729/looperman-l-2595729-0218133-fast-banger-trap-loop.mp3\"}"
+            },
+            "propagate_immediately": true
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "receiver": 1
+        }
+    ],
+    "control_links": []
+}
